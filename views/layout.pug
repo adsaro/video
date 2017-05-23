@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="/javascripts/main.js")
+  body
+    header
+      .container
+        .row
+          img.col-xs-6.col-sm-4.col-md-4.col-lg-3.img-responsive(src='/images/logo.png', alt='Logo')
+          block header
+    block navigation
+    block content
+    footer
+      p.text-center.text-white Copyrights © 2017 adsaro. All rights reserved.
+      .social.text-center
+        a(href='https://www.facebook.com/Zehc-Lab-1299866310039392/', target='_blank')
+          i.facebook
+        a(href='https://twitter.com/Zehc_Lab', target='_blank')
+          i.twitter
+        a(href='https://plus.google.com/u/0/115617244026992193416/about', target='_blank')
+          i.google
+        a(href='https://www.youtube.com/channel/UCoDJVH0zUDZl42rHl40PZEw', target='_blank')
+          i.youtube

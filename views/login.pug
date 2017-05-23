@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container
+    h1 Please log in
+    form#login(action='/login', method='post')
+      .form-group
+        label.sr-only email.
+        input.form-control(name='username', type='email', placeholder='email', title='Your email goes here')
+      .form-group
+        label.sr-only Password.
+        input.form-control(name='password', type='password', placeholder='Password', title='Your password goes here')
+      input#accede-button.btn.btn-sm.btn-acceder(type='submit', value='Log In')
+    h2 Or register
+      a(href='/register')  here

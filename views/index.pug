@@ -1,0 +1,21 @@
+extends layout
+
+block header
+  include ./includes/user.pug
+
+block navigation
+  include ./includes/navigation.pug
+
+block content
+  if user
+    if user.administrator
+      include ./includes/administrator.pug
+  
+    if user.type == "Teacher"
+      include ./includes/teacher.pug
+  
+    else
+      include ./includes/student.pug
+  
+  else
+    include ./includes/visitor.pug

@@ -1,0 +1,28 @@
+extends layout
+
+block header
+  include ./includes/user.pug
+
+block navigation
+  include ./includes/navigation.pug
+
+block content
+  .container
+    p=user.type
+    if user.administrator
+      video#video(width=640, height=360, controls, data-video-name='Administrator')
+    else
+      video#video(width=640, height=360, controls, data-video-name=user.type)
+  script.
+    $(function(){
+      var videoName = $("#video").data('video-name');
+      console.log(videoName)
+      $.ajax({
+          dataType: 'JSON',
+          type: 'GET',
+          url: '/videos/' + videoName,
+          success: function (data) {
+              $("#video").html('<source src="http://localhost:8081/video/' + data.url + '" type="video/mp4">');
+          }
+      });
+    })
