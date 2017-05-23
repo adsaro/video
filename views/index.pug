@@ -11,7 +11,7 @@ block content
     if user.administrator
       include ./includes/administrator.pug
   
-    if user.type == "Teacher"
+    else if user.type == "Teacher"
       include ./includes/teacher.pug
   
     else
